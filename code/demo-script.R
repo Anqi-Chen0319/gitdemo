@@ -12,6 +12,6 @@ library("dplyr")
 library("ggplot2")
 
 # Importing a data
-read.csv("../data/nba2018-players.csv",sep=",")
-was <- filter("../data/nba2018-players.csv",team=="WAS")
+dat <- read.csv("../data/nba2018-players.csv",sep=",")
+was <- filter(dat,team=="WAS")
 

@@ -61,4 +61,11 @@ ggplot(dat,aes(x=dat$height,y=dat$weight))+
   theme_bw()
 dev.off()
 
-#
+# save with ggsave
+ggplot(dat,aes(x=dat$height,y=dat$weight))+
+  geom_point()+
+  facet_wrap(dat$position)+
+  labs(x="Heigh",y="Weight")+
+  theme_bw()
+ggsave("../images/height_weight_by_position.pdf")
+
